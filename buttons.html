@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+    function click1(){
+        document.getElementById('cd1').style.visibility="visible";
+        document.getElementById('grid').style.filter="brightness(0.1)";
+    }
+    function click2(){
+        document.getElementById('cd2').style.visibility="visible";
+        document.getElementById('grid').style.filter="brightness(0.1)";
+    }
+    function clickout1(){
+        document.getElementById('cd1').style.visibility="hidden";
+        document.getElementById('grid').style.filter="brightness(1)";
+    }
+    function clickout2(){
+        document.getElementById('cd2').style.visibility="hidden";
+        document.getElementById('grid').style.filter="brightness(1)";
+    }
+</script>
+<style>
+.grid-container {
+    transition: 0.5s ease-in-out;
+    z-index: -1 !important;
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.grid-items {
+    transition: 0.5s ease-in-out;
+    margin-top: 23px;
+  transition: 1s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.b1{
+    transition: 0.5s ease-in-out;
+    width: 100%;
+    transition: 1s ease-in-out;
+    padding: 20px;
+}
+.b2{
+    transition: 0.5s ease-in-out;
+    width: 100%;
+    transition: 1s ease-in-out;
+    padding: 20px;
+    background: red !important;
+}
+button{
+    transition: 0.5s ease-in-out;
+    width: 100%;
+    transition: 1s ease-in-out;
+    padding: 20px;
+}
+#cd2{
+    margin-top: -54%;
+}
+/* .grid-items:hover button{
+    transition: 1s ease-in-out;
+    transform: scale(2);
+    margin-top: 2.5%;
+    margin-left: 4%;
+    filter: brightness(1) !important;
+    text-align: center;
+} */
+.card{
+    transition: 0.5s ease-in-out;
+    padding: 1%;
+    visibility: hidden;
+    transition: 0.5s ease-in-out;
+    padding: 0%;
+    width: 35vw;
+    background: rgba(0, 0, 0, 0.123);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-top: -82%;
+    margin-left: 32%;
+}
+.card2{
+    transition: 0.5s ease-in-out;
+    width: 100% !important;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    padding-bottom: 4%;
+}
+code {
+    transition: 0.5s ease-in-out;
+    display: contents;
+  height: min-content;
+  font-family: Consolas,"courier new";
+  color: rgb(54, 54, 54);
+  background-color: #f1f1f1;
+  padding: 2px;
+  font-size: 55%;
+}
+.card3{
+    background: rgb(0, 140, 255);
+    transition: 0.5s ease-in-out;
+    padding:2%;
+}
+body{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+footer{
+    background: rgb(255, 0, 0);
+    padding-bottom: 2%;
+    padding-top: 2%;
+    border-radius: 100px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 4%;
+
+}
+</style>
+</head>
+<body>
+<div class="grid-container" id="grid">
+<div class="grid-items"><button onclick="click1()" class="b1">hi</button></div>
+<div class="grid-items"><button onclick="click2()" class="b2">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>  
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+<div class="grid-items"><button onclick="clicku()">hi</button></div>  
+<div class="grid-items"><button onclick="clicku()">hi</button></div>
+</div>
+
+<!--card-->
+<div>
+<div class="card" id="cd1">
+    <div class="w3-card-4 card2" style="width:50%;">
+      <div class="w3-container w3-blue card3">
+        <button class="b1">hi</button>
+      </div>
+  
+      <div class="w3-container">
+        <h1>HTML</h1><br>
+        <div style="background: rgba(219, 218, 218, 0.288);text-align: left;padding: 5%;">
+            <code>
+                <<span>div class="grid-items"><<span>button>hi<<span>/button><<span>/div><br>
+            </code>
+        </div>
+        <h1>CSS</h1><br>
+        <div style="background: rgba(219, 218, 218, 0.288);text-align: left;padding: 5%;">
+            <code>
+                .grid-items {<br>
+                    margin-top: 23px;<br>
+                transition: 1s ease-in-out;<br>
+                background-color: rgba(255, 255, 255, 0.8);<br>
+                border: 1px solid rgba(0, 0, 0, 0.8);<br>
+                padding: 20px;<br>
+                font-size: 30px;<br>
+                text-align: center;<br>
+                }<br>
+                button{<br>
+                    width: 100%;<br>
+                    transition: 1s ease-in-out;<br>
+                    padding: 20px;<br>
+                }<br>
+            </code>
+        </div>
+    </div>
+    <footer class="w3-container w3-blue" onclick="clickout1()">
+        <h5>Close</h5>
+    </footer>
+  </div>
+</div>
+<!--card-->
+<div class="card" id="cd2">
+    <div class="w3-card-4 card2" style="width:50%;">
+      <div class="w3-container w3-blue card3">
+        <button class="b2">hi</button>
+      </div>
+  
+      <div class="w3-container">
+        <h1>HTML</h1><br>
+        <div style="background: rgba(219, 218, 218, 0.288);text-align: left;padding: 5%;">
+            <code>
+                <<span>div class="grid-items"><<span>button>hi<<span>/button><<span>/div><br>
+            </code>
+        </div>
+        <h1>CSS</h1><br>
+        <div style="background: rgba(219, 218, 218, 0.288);text-align: left;padding: 5%;">
+            <code>
+                .grid-items {<br>
+                    margin-top: 23px;<br>
+                transition: 1s ease-in-out;<br>
+                background-color: rgba(255, 255, 255, 0.8);<br>
+                border: 1px solid rgba(0, 0, 0, 0.8);<br>
+                padding: 20px;<br>
+                font-size: 30px;<br>
+                text-align: center;<br>
+                }<br>
+                button{<br>
+                    width: 100%;<br>
+                    transition: 1s ease-in-out;<br>
+                    padding: 20px;<br>
+                }<br>
+            </code>
+        </div>
+    </div>
+    <footer class="w3-container w3-blue" onclick="clickout2()">
+        <h5>Close</h5>
+    </footer>
+  </div>
+</div>
+<!--card-->
+<div class="card" id="cd">
+    <div class="w3-card-4 card2" style="width:50%;">
+      <div class="w3-container w3-blue card3">
+        <button>hi</button>
+      </div>
+  
+      <div class="w3-container">
+        <h1>HTML</h1><br>
+        <div style="background: rgba(219, 218, 218, 0.288);text-align: left;padding: 5%;">
+            <code>
+                <<span>div class="grid-items"><<span>button>hi<<span>/button><<span>/div><br>
+            </code>
+        </div>
+        <h1>CSS</h1><br>
+        <div style="background: rgba(219, 218, 218, 0.288);text-align: left;padding: 5%;">
+            <code>
+                .grid-items {<br>
+                    margin-top: 23px;<br>
+                transition: 1s ease-in-out;<br>
+                background-color: rgba(255, 255, 255, 0.8);<br>
+                border: 1px solid rgba(0, 0, 0, 0.8);<br>
+                padding: 20px;<br>
+                font-size: 30px;<br>
+                text-align: center;<br>
+                }<br>
+                button{<br>
+                    width: 100%;<br>
+                    transition: 1s ease-in-out;<br>
+                    padding: 20px;<br>
+                }<br>
+            </code>
+        </div>
+    </div>
+    <footer class="w3-container w3-blue" onclick="clickout3()">
+        <h5>Close</h5>
+    </footer>
+  </div>
+</div>
+<!--card-->
+<div class="card" id="cd">
+    <div class="w3-card-4 card2" style="width:50%;">
+      <div class="w3-container w3-blue card3">
+        <button>hi</button>
+      </div>
+  
+      <div class="w3-container">
+        <h1>HTML</h1><br>
+        <div style="background: rgba(219, 218, 218, 0.288);text-align: left;padding: 5%;">
+            <code>
+                <<span>div class="grid-items"><<span>button>hi<<span>/button><<span>/div><br>
+            </code>
+        </div>
+        <h1>CSS</h1><br>
+        <div style="background: rgba(219, 218, 218, 0.288);text-align: left;padding: 5%;">
+            <code>
+                .grid-items {<br>
+                    margin-top: 23px;<br>
+                transition: 1s ease-in-out;<br>
+                background-color: rgba(255, 255, 255, 0.8);<br>
+                border: 1px solid rgba(0, 0, 0, 0.8);<br>
+                padding: 20px;<br>
+                font-size: 30px;<br>
+                text-align: center;<br>
+                }<br>
+                button{<br>
+                    width: 100%;<br>
+                    transition: 1s ease-in-out;<br>
+                    padding: 20px;<br>
+                }<br>
+            </code>
+        </div>
+    </div>
+    <footer class="w3-container w3-blue" onclick="clickout4()">
+        <h5>Close</h5>
+    </footer>
+  </div>
+</div>
+</body>
+</html>
