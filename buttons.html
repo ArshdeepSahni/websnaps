@@ -506,9 +506,9 @@ footer{
 <body id="body">
 <div class="page-wrapper chiller-theme toggled">
   <nav id="sidebar" class="sidebar-wrapper">
-    <a id="show-sidebar" class="btn btn-sm btn-dark" onclick="opens()" href="#">
+    <!-- <a id="show-sidebar" class="btn btn-sm btn-dark" onclick="opens()" href="#">
       <i class="fas fa-bars" id="bars"></i>
-  </a>
+  </a> -->
     <div class="sidebar-content">
       <div class="sidebar-brand">
         <a href="#">pro sidebar</a>
@@ -705,17 +705,17 @@ footer{
   </nav>
   <!-- sidebar-wrapper  -->
   <div id="head"></div>
-  <div id="nav"><i onclick="upopen()" class="fas fa-bars nav-fabar" id="bars"></i></div>
+  <div id="nav"><i onclick="opens()" class="fas fa-bars nav-fabar" id="bars"></i></div>
   <style>
     #head{
-         /* position: fixed;*/
+         position: relative;
          z-index: 5 !important; 
          background-image: linear-gradient( #ff7835 ,  #ffa935 );
         height: 100px;
         font-weight: bold;
         text-align: left;
         font-size:x-large;
-        width: 0;
+
        }
       #nav{
          position: fixed;
