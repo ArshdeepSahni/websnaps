@@ -446,7 +446,6 @@ footer{
 
 
 
-<!------ Include the above in your HEAD tag ---------->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -469,11 +468,15 @@ footer{
         document.getElementById('grid').style.marginLeft="18%";
         document.getElementById('sidebar').style.width='18%';
         document.getElementById('sidebar').style.visibility='visible';
+        document.getElementById('navbar').style.filter="blur(2.5px) brightness(0.1)";
+        document.getElementById('nav').style.filter="blur(2.5px) brightness(0.1)";
         document.getElementById('show-sidebar').style.left='-100px';
         document.getElementById('show-sidebar').style.height='0px';
         document.getElementById('show-sidebar').style.visibility='hidden';
     }
     function closed(){
+      document.getElementById('navbar').style.filter="blur(0px) brightness(1)";
+        document.getElementById('nav').style.filter="blur(0px) brightness(1)";
       document.getElementById('bars').style.visibility='visible';
       var nodes = document.getElementById("grid").getElementsByTagName('*');
         for(var i = 0; i < nodes.length; i++){
@@ -504,6 +507,7 @@ footer{
 </head>
 
 <body id="body">
+  <section id="all">
 <div class="page-wrapper chiller-theme toggled">
   <nav id="sidebar" class="sidebar-wrapper">
     <!-- <a id="show-sidebar" class="btn btn-sm btn-dark" onclick="opens()" href="#">
@@ -704,52 +708,564 @@ footer{
     </div>
   </nav>
   <!-- sidebar-wrapper  -->
-  <div id="head"></div>
+  <!-- <div id="head"></div> -->
+  <div class="top-nav-bar" id="navbar">
+    <div class="search-box">
+    <a href="index.html"><img src="coderror2.png" class="logo"></a>
+    <a href="index.html"><i><h1 class="head" id="head">CRUX</h1></i></a>
+    <a href="#" class="plus"><i>Plus</i>+</a>
+    <!-- <input type="text" class="form-control" placeholder="search here...">
+    <span class="input-group-text"><i class="fa fa-search"></i></span> -->
+    </div>
+    <div class="menu-bar">
+    <ul>
+      <li><a href="#"><i class="fa fa-shopping-cart"></i>Cart</a><b id="output"></b></li>
+      <li><a href="#"><i class="fa fa-user-plus"></i>Signup</a></li>
+      <li><a href="#"><i class="fa fa-sign-in"></i>Log-In</a></li>
+      <li><a href="#"><i class="fa fa-user-circle"></i>User</a></li>
+    </ul>
+    </div>
+    </div>
   <div id="nav"><i onclick="opens()" class="fas fa-bars nav-fabar" id="bars"></i></div>
   <style>
-    #head{
+    /* #head{
          position: relative;
          z-index: 5 !important; 
-         background-image: linear-gradient( #ff7835 ,  #ffa935 );
-        height: 100px;
+         background-image: linear-gradient( #ff7835 ,  #ffa935 ); */
+         /* box-shadow: 0px 10px 10px #ffa935 ; */
+        /* height: 100px;
         font-weight: bold;
         text-align: left;
-        font-size:x-large;
-
-       }
+        font-size:x-large; */
+        /* border-radius: 0 0 50px 50px; */
+       /* } */
       #nav{
          position: fixed;
          z-index: 1;
-         margin-top: -90px !important;
+         margin-top: -70px !important;
          margin-left: 10px !important;
         height: 35px; 
         width: 98%;
         border-radius: 100px;
         justify-content: center;
-        background: linear-gradient(to left,#343a40, black, #343a40) !important;
+        border: 2px solid orange;
+        /* background: linear-gradient(to left,#343a40, black, #343a40) !important; */
+        background: rgb(255, 255, 255);
         transition: 0.5s ease-in-out;
         z-index: 3;
+        box-shadow: 0px -20px 30px rgba(0, 0, 0, 0.514) ;
       }
       #nav:hover{
-        box-shadow: 0px 0px 10px rgb(0, 0, 0) ;
+        /* box-shadow: 0px 0px 10px rgb(0, 0, 0) ; */
         border: none;
         transition: 0.5s ease-in-out;
-        background: linear-gradient(to left,#000000, #343a40, #000000) !important;
+        /* background: linear-gradient(to left,#000000, #343a40, #000000) !important; */
       }
       #nav:hover .fa-bars{
         color: white;
-        vertical-align: bottom !important;
-        margin-left: 7vh !important;
+        /* vertical-align: bottom !important; */
+        /* margin-left: 7vh !important; */
         transition: 0.5s ease-in-out;
-        text-shadow: 0px 0px 5px white;
-        transform: scale(1.5) rotate(270deg);
+        text-shadow: 0px 0px 5px rgb(0, 0, 0);
+        transform: scale(2) rotate(360deg);
       }
       .nav-fabar{
-        margin-left: 5px;
-        margin-top: 5px !important;
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+        color: rgb(0, 0, 0);
+        margin-left: 15px;
+        margin-top: 10px !important;
         vertical-align: baseline;
       }
+      .headline{
+        margin-top:100px !important;
+      }
   </style>
+  <style>
+    *{
+      scroll-behavior: smooth;
+      margin: 0;
+      padding: 0;
+    }
+    /* body{
+      scroll-behavior: smooth;
+      background: rgb(215, 215, 215) !important;
+      color: rgb(0, 0, 0);
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    #dark{
+      top: 380px;
+      background-color: rgb(57, 57, 65);
+    }
+    #bright{
+      top: 440px;
+      background-color: rgb(174, 174, 188);
+    }
+    #side-menu{
+      background: linear-gradient(to top,rgba(0,0,0,0.800),rgba(0,0,0,0.800),rgba(0,0,0,0.800),rgba(0,0,0,0.800),rgba(0,0,0,0.800),black);
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      transition: 2s;
+      display: none;
+    }
+    #body{
+      transition: 1s;
+    }
+    #slider{
+      transition: 1s;
+    }
+    #category{
+      background: linear-gradient(to right,transparent,rgba(0, 0, 255, 0.432),blue,rgba(0, 0, 255, 0.466),transparent);
+      transition: 1s;
+      margin-left: -40px;
+    }
+    #on-sale{
+      background-size: 100%;
+      margin-left: 10px;
+      transition: 1s;
+    }
+    #new-products{
+      margin-left: 10px;
+      transition: 1s;
+    }
+    #features{
+      background: linear-gradient(to right,transparent,blue,transparent);
+      transition: 1s;
+    } */
+    .top-nav-bar{
+      height: 80px;
+      top: 0;
+      position: relative;
+      /* background: linear-gradient(to right,white,#2874f0,#2874f0,#2874f0,#2874f0); */
+      background: rgb(255, 255, 255);
+      margin-bottom: 20px;
+      border-bottom: 3px solid orange;
+      z-index: 5;
+    }
+    .logo{
+      height: 40px;
+      margin: 5px 10px;
+      animation: rotate 5s infinite ease-in-out;
+      transition: 0s;
+      cursor: pointer;
+    }
+    @keyframes rotate {
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+    .form-control{
+      transition: 1s;
+      margin-top: 9px;
+      margin-left: 30px;
+      color: orange;
+      border-top-left-radius: 20px !important;
+      border-bottom-left-radius: 20px !important;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      box-shadow: none !important;
+      background: white;
+    }
+    .input-group-text{
+      background: rgb(255, 255, 255);
+      border: 0;
+      margin: 8.5px 15px 3px 0;
+      color: orange;
+      transition: 1s;
+      border-top-left-radius: 0px !important;
+      border-bottom-left-radius: 0px !important;
+      border-top-right-radius: 20px !important;
+      border-bottom-right-radius: 20px !important;
+      cursor: pointer;
+    }
+    .input-group-text:hover{
+      background: orange;
+    }
+    .search-box{
+      color: rgb(0, 98, 255);
+      height: 50px;
+      display: inline-flex;
+      width: 50%;
+    }
+    .fa-search{
+      color: rgb(0, 102, 255);
+      text-align: center;
+      margin-bottom: 5px;
+      margin-right: 5px;
+      transition: 1s;
+    }
+    .fa-search:hover{
+      color: rgb(0, 102, 255);
+    }
+    .menu-bar{
+      width: 40%;
+      height: 57px;
+      float: right;
+    }
+    .menu-bar ul{
+      display: inline-flex;
+      float: right;
+      height: auto;
+    }
+    .menu-bar ul li{
+      list-style-type: none;
+      padding: 15px 20px;
+      text-align: center;
+      background: transparent;
+      cursor: pointer;
+    }
+    .menu-bar ul li:hover{
+      list-style-type: none;
+      padding: 15px 20px;
+      text-align: center;
+      background: rgba(132, 161, 229, 0);
+      cursor: pointer;
+    }
+    .menu-bar ul li a{
+      font-size: 18px;
+      font-weight: bold;
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .menu-bar ul li a:hover{
+      color: orange;
+    }
+    .fa-shopping-cart{
+      padding-right: 10px;
+    }
+    .fa-user-plus{
+      padding-right: 10px;
+    }
+    .fa-sign-in{
+      padding-right: 10px;
+    }
+    .fa-user-circle{
+      padding-right: 10px;
+    }
+    @media only screen and (max-width: 1200px){
+      .top-nav-bar{
+        height: 100px;
+        border-bottom: 1px solid orange;
+        width: 100%;
+      }
+      .search-box{
+        width: 100%;
+      }
+      .menu-bar{
+        width: 100%;
+      }
+      .menu-bar ul{
+        margin: 10px 0;
+        width: 100%;
+      }
+      .menu-bar ul li{
+        height: 40px;
+        width: 100% auto;
+      }
+      .menu-bar ul li a{
+        font-size: 16px;
+      }
+      
+    }
+    .side-menu{
+      scroll-behavior: smooth;
+      margin-left: 10px;
+      transition: 1s ease-in-out;
+      height: fit-content;
+      width: 19%;
+      font-size: 22px;
+      float: left;
+    }
+    .side-signin{
+      background: orange;
+      width: 500px;
+      cursor: pointer;
+      padding-left: 0%;
+      padding-right: 11.5%;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      transition:1s;
+      color: rgb(31, 71, 248) !important;
+    }
+    .side-signin:hover{
+      background: rgb(31, 71, 248);
+      color: white !important;
+    }
+    .head{
+      padding: 5px;
+      color: #2874f0;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .side-menu ul{
+      margin-left: 10px;
+      margin-top: 2px;
+      padding-bottom: 4px;
+      padding-left: 20px;
+    }
+    .side-menu ul li1{
+      border-radius: 50px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      background: #0177ff;
+      list-style-type: none;
+      font-weight: bold;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: 1s;
+      font-size: 20px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      margin-left: -25px;
+    }
+    .side-menu ul li1:hover{
+      background: rgb(255, 255, 255);
+    }
+    .side-menu ul li{
+      list-style-type: none;
+      font-size: 25px;
+    }
+    .side-menu ul lish a{
+      list-style-type: none;
+      margin-top: 10px;
+      cursor: pointer;
+      margin-left: -20px;
+      font-size: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+      padding-top: 5px;
+    }
+    .side-menu ul lish a:hover{
+      color: orange;
+    }
+    .side-menu ul li a{
+      color: rgb(255, 255, 255);
+      list-style-type: none;
+      margin-top: 10px;
+      cursor: pointer;
+      margin-left: -20px;
+      font-size: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .side-menu ul li:hover a{
+      color: orange !important ;
+    }
+    .side-menu ul li1 + .ul{
+      display: inline-flex;
+      margin-left: -20px;
+      opacity: 100%;
+      z-index: 10;
+      top: 77px;
+    }
+    .side-menu ul li1:hover + .ul{
+      display: flex;
+      opacity: 100%;
+      height: 23%;
+      margin-left: 0px;
+      padding: 0 100px 10px 10px;
+      position: sticky;
+      background: rgba(26, 25, 25, 0.828);
+    }
+    .fa-angle-double-right{
+      opacity: 100%;
+      transition: 1s;
+    }
+    .fa-angle-double-right:hover{
+      opacity: 100%;
+      transform: translateX(10px);
+    }
+    #menu-btn{
+      border: 5px solid orange;
+      padding: 5px;
+      cursor: pointer;
+      position: fixed;
+      transition: 1s;
+      font-size: 30px;
+      margin: 10px;
+      color: rgb(0, 0, 0);
+      display: block;
+    }
+    #menu-btn:hover{
+      border: 5px solid rgb(22, 111, 255);
+      color:rgb(22, 111, 255) ;
+    }
+    #close-btn{
+      width: 45px;
+      padding: 5px;
+      border: 5px solid orange;
+      position: static;
+      transition: 1s;
+      font-size: 30px;
+      margin: 10px;
+      color: rgb(0, 0, 0);
+      display: none;
+    }
+    #close-btn:hover{
+      border: 5px solid rgb(22, 111, 255);
+      color: red;
+    }
+    @media only screen and (max-width: 1200px){
+      #menu-btn{
+        transition: 1s;
+        display: block;
+        border: 3px solid rgb(0, 102, 255);
+        padding-right: 0;
+      }
+      #close-btn{
+        transition: 1s;
+        border: 3px solid rgb(0, 102, 255);
+        padding-right: 0;
+      }
+      .fa-times{
+        position: fixed;
+        transition: 1s;
+        width: 40px;
+        padding: 5px;
+        padding-right: 10px;
+      }
+      .fa-bars{
+        position: fixed;
+        transition: 1s;
+        width: 40px;
+        padding: 5px;
+        padding-right: 10px;
+  
+      }
+      .side-menu{
+        display: none;
+        width: 29%;
+      }
+    .side-menu ul li{
+      transition: 1s;
+      list-style-type: none;
+      font-weight: bold;
+      margin-top: 10px;
+      cursor: pointer;
+      font-size: 13px;
+      border-radius: 20px;
+      padding-left: 0px;
+      padding-right: 20px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    .side-menu ul li1{
+      width: auto;
+      margin-left: -30px;
+    }
+    .side-menu ul li1 + .ul{
+      display: block;
+      width: auto;
+    }
+    .side-menu ul li1:hover + .ul{
+      display: block;
+      width: auto;
+    }
+    }
+  </style>
+  <body id="body">
+  
+  
+  
+  
+  
+  <!----------------------------------------navbar------------------------------------>
+  <style>
+      #mySidenav a {
+        color: transparent;
+        position: fixed;
+        left: 1400px;
+        transition: 0.3s;
+        padding: 15px;
+        width: 100px;
+        text-decoration: none;
+        font-size: 15px;
+        border-radius: 10px 0px 0px 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+      
+      #mySidenav a:hover 
+      {
+        transition: 0.3s ease-in-out;
+        text-align: center;
+        left: 1350px;
+        color: rgb(255, 255, 255);
+      }
+      
+      #home {
+        top: 80px;
+        background-color: rgb(0, 132, 255);
+      }
+      
+      #code-nav {
+        top: 140px;
+        background-color: rgb(6, 99, 205);
+      }
+      
+      #reviews {
+        top: 200px;
+        background-color: rgb(4, 79, 164)
+      }
+      #aboutus {
+        top: 260px;
+        background-color: rgb(3, 66, 139);
+      }
+      #contact {
+        color: black;
+        top: 320px;
+        background-color: rgb(4, 51, 106);
+      }
+      .plus{
+        color: white;
+        font-size: 20px;
+        transition: 0.5s;
+      }
+      .plus:hover{
+        color:orange
+      }
+      @media only screen and (max-width: 1200px){
+        #mySidenav a {
+        color: rgb(255, 255, 255);
+        position: fixed;
+        left: 98%;
+        transition: 0.5s;
+        padding: 15px;
+        width: 100px;
+        text-decoration: none;
+        font-size: 15px;
+        border-radius: 10px 0px 0px 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+      
+      #mySidenav a:hover {
+        left: 90%;
+        color: rgb(255, 255, 255);
+      }
+      
+      #home {
+        top: 80px;
+        background-color: rgb(0, 132, 255);
+      }
+      
+      #code-nav {
+        top: 140px;
+        background-color: rgb(6, 99, 205);
+      }
+      
+      #reviews {
+        top: 200px;
+        background-color: rgb(4, 79, 164)
+      }
+      #aboutus {
+        top: 260px;
+        background-color: rgb(3, 66, 139);
+      }
+      #contact {
+        color: black;
+        top: 320px;
+        background-color: rgb(4, 51, 106);
+      }
+      }
+      </style>
 
 
 
@@ -983,7 +1499,7 @@ footer{
                                                                                                                                                     </script>
                                                                                                                                                     <style>
                                                                                                                                                         #grid{
-                                                                                                                                                          padding-top: 50px;
+                                                                                                                                                          padding-top: 100px;
                                                                                                                                                           margin-top: -100px;
                                                                                                                                                             margin-left: 18%;
                                                                                                                                                             width: 82%;
@@ -994,7 +1510,7 @@ footer{
                                                                                                                                                     display: grid;
                                                                                                                                                     grid-column-gap: 50px;
                                                                                                                                                     grid-template-columns: auto auto auto;
-                                                                                                                                                    background-color: #2196F3;
+                                                                                                                                                    background-color: #ffffff;
                                                                                                                                                     /* padding: 10px; */
                                                                                                                                                     padding-bottom: 40px;
                                                                                                                                                     padding-left: 60px;
@@ -1216,7 +1732,7 @@ footer{
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    
+</section>
 </body>
 
 </html>
@@ -1319,7 +1835,8 @@ body {
   .page-wrapper.toggled .page-content {
     padding-left: 300px;
   }
-}
+
+  
 /*----------------show sidebar button----------------*/
 #show-sidebar {
   /* box-shadow: 10px 0px 20px rgb(0, 0, 0) ; */
