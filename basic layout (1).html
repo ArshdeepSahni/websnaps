@@ -3,55 +3,27 @@
 <head>
 <title>Basic Layout</title>
 <style type="text/css">
-	.head{
-         
-        background-image: linear-gradient( #ff7835 ,  #ffa935 );
-         height: 100px;
-         font-weight: bold;
-         text-align: left;
-         font-size:x-large; 
-           
-    	}
 
-.main{
-	background-color: #9d35ff;
-	padding-bottom: 200px 
-}
 
-.desc{
-	
-	float: left;
-	width: 300px;
-	height: 800px;
-	padding-top: 100px;
-	text-align: left;
-	background-image: linear-gradient( #35d4ff, #35a9ff, #35ffed);
-   
-}
 
-.nav{
 
-display: flex;
-justify-content: center;
-background-color: red;
-}
 	.parent
 	{
-		
-	
+
+
 border:0.5px solid #b5b5b5;
 	display: grid;
   grid-template-columns: auto auto auto;
 grid-gap: 50px;
-  background-image:linear-gradient(  #35ffdd ,#61cad8,#37cce0);
+  background-image:linear-gradient(#35ffdd ,#61cad8,#37cce0);
   padding: 10px;
  margin-top: 10px;
 height:800px;
  width: auto;
-	
+
 	}
 .dv1{
-	
+
 background-color: gray;
   border: 1px dotted orange;
   border-radius: 30px;
@@ -60,14 +32,69 @@ background-color: gray;
 
 }
 .int{
-	 
+
 
 	width: 100%;
 	height: 50px;
 border:5px solid gray;
 border-radius: 30px;
 }
+.op-parent
+{
+background-color: black;
+width: auto;
+height: 30px;
+width: 80%;
+}
+.webname
+{
 
+text-align: left;
+margin: 10px;
+width: 500px;
+}
+.head{
+
+  z-index: 1;
+  display: block;
+  background-image: linear-gradient( #ff7835 ,  #ffa935 );
+          height: auto;
+          font-weight: bold;
+          text-align: left;
+}
+.options
+{
+display: inline-block;
+color: white;
+background-color: black;
+border-right: white;
+margin-right: 50px;
+margin-top: 4px;
+}
+.user{
+  margin:10px;
+  display:flex;
+	margin-left: 1000px;
+	width:300px;
+
+}
+.algn{
+  display: flex;
+}
+
+.Logout{
+
+  align-items: right;
+}
+a{
+
+  text-decoration: none;
+  color: black;
+}
+.as
+{
+width: 120px;
+}
 </style>
 
 
@@ -78,24 +105,56 @@ border-radius: 30px;
 
 <body>
 
+	<div class="head" >
+
+<div class="algn">
+
+
+  <div class="webname">
+    <h1>Name  or Logo Here</h1>
+  </div>
 
 
 
 
-	<div class="head"><h1>Header</h1></div>
-	
-<div class="nav"><h1>top nav</h1></div>
-	
+    <div class="user" >
+      <div class="as">
+    <img class="usrimg"src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg" width="50px"
+    height="50px"><br>
 
-	<div class="main">
-		<div class="desc">Tag description xxxxxxxxxxxxxxxxxx------xxxxxxxxxxxxxxxxxxx----------xxxxxxxxxxxxxxxxxx-------xxxxxxxxxxxxxxx---------xxxxxxxxxxxxxxx----------xxxxxxxxxxxxx----------xxxxxxxxxxxxxxxxx</div>
+    	<a href="#">John Smith</a>
+    	  <br/><a href="#">Normal User</a>
+</div>
+<div class="Logout">
+
+        <button class="Logout">Logout</button>
+</div>
+     </div>
+
+
+
+</div>
+
+	<div class="op-parent">
+	<div class="options"><button>Option</button></div>
+	<div class="options"><button>Option</button></div>
+	<div class="options"><button>Option</button></div>
+	<div class="options"><button>Option</button></div>
+	<div class="options"><button>Option</button></div>
+	<div class="options"><button>Option</button></div>
+	<div class="options"><button>Option</button></div>
+	<div class="options"><button>Option</button></div>
+	</div>
+
+</div>
+
 	<div class="parent">
 
 
 	<div class="dv1"><button class="int">Button 1</button>
 
 		<br><p style="text-align: center;">style name</p></div>
-	
+
 	<div class="dv1"><button class="int">Button 1</button>
 
 		<br><p style="text-align: center;">style name</p></div>
@@ -138,7 +197,9 @@ border-radius: 30px;
 	<div class="dv1"><button class="int">Button 1</button>
 
 		<br><p style="text-align: center;">style name</p></div>
-	
+
 </div>
 </div>
+
+
 </body>
