@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="final.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+        div{
+            text-align:center;
+            /* width: min-content; */
+        }
+        .code1{
+            transition: 0.5s ease-in-out;
+            animation-delay: 0s;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.548);
+            animation: 2s code1 ease-in-out;
+            border-radius: 20px;
+            padding: 10px;
+            margin-top: 20px;
+            background: rgb(255, 198, 91) !important;
+        }
+        .code1:hover code{
+            transition: 0.5s ease-in-out;
+            color: black;
+        }
+        .code1:hover{
+            transition: 0.5s ease-in-out;
+            transform: scale(1.3);
+        }
+        .code2{
+            transition: 0.5s ease-in-out;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.548);
+            animation-delay: 4s;
+            animation: 2s code2 ease-in-out;
+            border-radius: 20px;
+            padding: 10px;
+            margin-top: 20px;
+            background: rgb(255, 198, 91) !important;
+        }
+        .code2:hover code{
+            transition: 0.5s ease-in-out;
+            color: black;
+        }
+        .code2:hover{
+            transition: 0.5s ease-in-out;
+            transform: scale(1.3);
+        }
+        code{
+            color: rgb(216, 131, 4);
+            font-size: 20px;
+        }
+        @keyframes code1{
+            50%{
+                transition: 1s ease-in-out;
+                transform: rotateY(90deg) scale(0);
+            }
+        }
+        @keyframes code2{
+            50%{
+                transition: 1s ease-in-out;
+                transform: rotatex(90deg) scale(2);
+            }
+        }
+        .button{
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.548);
+            background: linear-gradient(to left,black,orange);
+        }
+        .button:hover{
+            transform: scale(1.3);
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 30%; margin-left: 35%;">
+    <div class="grid-items it5 button"><button id="s5" href="#">hi</button></div>
+    <div class="code1">    
+    <h2>HTML</h2>
+        <code>
+        <<span>button id="s5" href="#">hi<</span>/button>
+        </code>
+    </div>
+    <div class="code2">    
+        <h2>CSS</h2>
+        <code>
+        #s4<br>
+        {<br>
+            border-radius: 20px;<br>
+            background: none;<br>
+            border: 2px solid #000;<br>
+            font-family: "montserrat",sans-serif;<br>
+            text-transform: uppercase;<br>
+            margin: 10px;<br>
+            cursor: pointer;<br>
+            transition: 1s ease-in-out;<br>
+            position: relative;<br>
+        }<br>
+        #s4:hover<br>
+        {<br>
+            transition: 1s ease-in-out;<br>
+            animation: bw 1s ease-in-out;<br>
+        }<br>
+        @keyframes bw{
+            10%{<br>
+              transition: 1s ease-in-out;<br>
+              background: radial-gradient(white,rgb(165, 164, 164));<br>
+              background-position: bottom;<br>
+            }<br>
+            20%{<br>
+              transition: 1s ease-in-out;<br>
+              background: radial-gradient(rgb(165, 164, 164),grey);<br>
+              background-position: top;<br>
+            }<br>
+            30%{<br>
+              transition: 1s ease-in-out;<br>
+              background: radial-gradient(grey,rgb(90, 90, 90));<br>
+              background-position: bottom;<br>
+            }<br>
+            40%{<br>
+              transition: 1s ease-in-out;<br>
+              background: radial-gradient(rgb(156, 156, 156),rgb(90, 90, 90),rgb(46, 46, 46));<br>
+              background-position: top;<br>
+            }<br>
+            50%{<br>
+              color: white;<br>
+              font-weight: 100;<br>
+              transition: 1s ease-in-out;<br>
+              background: radial-gradient(rgb(192, 192, 192),rgb(126, 125, 125),black);<br>
+              background-position: bottom;<br>
+            }<br>
+            60%{<br>
+              transition: 1s ease-in-out;<br>
+              background: radial-gradient(rgb(212, 211, 211),black,rgb(146, 146, 146));<br>
+              background: rgb(255, 255, 255);<br>
+              background-position: top;<br>
+            }<br>
+            70%{<br>
+              transition: 1s ease-in-out;<br>
+              background: radial-gradient(rgb(224, 224, 224),rgb(160, 160, 160));<br>
+              background-position: bottom;<br>
+            }<br>
+            80%{<br>
+              transition: 1s ease-in-out;<br>
+              background: radial-gradient(rgb(255, 255, 255),rgb(196, 195, 195));<br>
+              background-position: top;<br>
+            }<br>
+            90%{<br>
+              transition: 1s ease-in-out;<br>
+              background: radial-gradient(rgb(238, 236, 236),rgb(160, 160, 160));<br>
+              background-position: bottom;<br>
+            }<br>
+            100%{<br>
+              transition: 1s ease-in-out;<br>
+              background: rgb(255, 255, 255);<br>
+              background-position: top;<br>
+            }<br>
+          }<br>
+    </code>
+    </div>
+    </div>
+</body>
+</html>

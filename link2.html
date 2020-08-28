@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="final.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+        div{
+            text-align:center;
+            /* width: min-content; */
+        }
+        .code1{
+            transition: 0.5s ease-in-out;
+            animation-delay: 0s;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.548);
+            animation: 2s code1 ease-in-out;
+            border-radius: 20px;
+            padding: 10px;
+            margin-top: 20px;
+            background: rgb(255, 198, 91) !important;
+        }
+        .code1:hover code{
+            transition: 0.5s ease-in-out;
+            color: black;
+        }
+        .code1:hover{
+            transition: 0.5s ease-in-out;
+            transform: scale(1.3);
+        }
+        .code2{
+            transition: 0.5s ease-in-out;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.548);
+            animation-delay: 4s;
+            animation: 2s code2 ease-in-out;
+            border-radius: 20px;
+            padding: 10px;
+            margin-top: 20px;
+            background: rgb(255, 198, 91) !important;
+        }
+        .code2:hover code{
+            transition: 0.5s ease-in-out;
+            color: black;
+        }
+        .code2:hover{
+            transition: 0.5s ease-in-out;
+            transform: scale(1.3);
+        }
+        code{
+            color: rgb(216, 131, 4);
+            font-size: 20px;
+        }
+        @keyframes code1{
+            50%{
+                transition: 1s ease-in-out;
+                transform: rotateY(90deg) scale(0);
+            }
+        }
+        @keyframes code2{
+            50%{
+                transition: 1s ease-in-out;
+                transform: rotatex(90deg) scale(2);
+            }
+        }
+        .button{
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.548);
+            background: linear-gradient(to left,black,orange);
+        }
+        .button:hover{
+            transform: scale(1.3);
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 30%; margin-left: 35%;">
+    <div class="grid-items itl2 button"><a id="l2" href="#">hi</a></div>
+    <div class="code1">    
+    <h2>HTML</h2>
+        <code>
+        <<span>button id="l1" href="#">hi<</span>/button>
+        </code>
+    </div>
+    <div class="code2">    
+        <h2>CSS</h2>
+        <code>
+        #s1<br>
+        {<br>
+            background: white;<br>
+            border: none;<br>
+            font-weight: 100;<br>
+            box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.329);<br>
+            transform: rotateX(0deg);<br>
+            transition: 1s ease-in-out;<br>
+        }<br>
+        #s1:hover<br>
+        {<br>
+          transform: rotateX(-20deg) rotateY(5deg);<br>
+          transition: 1s ease-in-out;<br>
+          box-shadow: 0px 10px 5px 3px rgba(0, 0, 0, 0.329);<br>
+        }<br>
+    </code>
+    </div>
+    </div>
+</body>
+</html>
