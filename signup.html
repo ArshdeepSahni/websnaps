@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>Sign-up for O.S.S</title>
+<link rel="stylesheet" type="text/css" href="signup.css"/>
+
+
+<script>
+function checkif()
+{
+var val=document.getElementById("phone").value;
+var val1=/^\d{5}-\d{5}$/;
+
+if(val1.test(val))
+{
+document.getElementById("check").style.color="Green";
+document.getElementById("check").innerHTML=" Valid";
+return(true);
+}
+else
+{document.getElementById("check").style.color="Red";
+document.getElementById("check").innerHTML=" Not-Valid"
+}
+}
+function ema()
+{
+var val=document.getElementById("email").value;
+var val1="";
+if(val==val1)
+{document.getElementById("emailspan").style.color="Orange";
+document.getElementById("emailspan").innerHTML="Want to continue withou E-mail?";
+}
+else
+{document.getElementById("emailspan").style.color="Green";
+document.getElementById("emailspan").innerHTML="Accepted";
+}}
+function passcheck(){
+
+var val=document.getElementById("logininfo").value;
+
+if(val.length<=7)
+{document.getElementById("pass").style.color="Red";
+
+document.getElementById("pass").innerHTML="Atleast 8 characters required";
+}
+else{
+document.getElementById("pass").style.color="Green";
+document.getElementById("pass").innerHTML="Accepted";
+}}
+
+
+</script>
+</head>
+<h1>Sign-up</h1>
+
+
+<form action="prac3login.html">
+<h2><strong>Fill in the deatils</strong></h2>
+
+<table>
+
+<tr>
+<td><span class="sp2"> Firstname : </span></td><td><input type="text" name="firstname" required /></td>
+</tr>
+
+<tr>
+<td><span class="sp2">Lastname:  </span></td><td><input type="text" name="lastname" required /></td>
+</tr>
+<br><br>
+<tr>
+
+<td><span class="sp2">Phone Number:  </span></td>
+<td><input  id="phone" type="text" name="phone" onblur="checkif();" required /> </td>
+
+<td><span id="check"></span></td>
+
+</tr>
+<br><br>
+
+<tr>
+<td><span class="sp2">E-mail:  </span></td>
+<td><input id="email" type="text" name="email" onblur="ema();" required /></td>
+<td><span id="emailspan" ></span>
+</tr>
+<tr>
+<td><span class="sp2">Password : </span></td>
+<td>
+<input id="logininfo" type="password" name="password" onblur="passcheck();" required /></td>
+<td><span id="pass"> </span></td>
+</tr>
+
+</tr>
+</table>
+<br><br><br><br>
+
+<input type="checkbox" name="offers" value=""/>
+   I would like to recieve E-mails about latest ongoing offers.
+
+
+
+
+<br><br><br>
+<a href="buttons.html" style="background: white;">Create New Account</a>
+<br><br>
+</form>
+<br><br>

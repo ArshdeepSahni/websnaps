@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="final.css">
+    <script>
+      function dark(){
+          document.getElementById('grid').style.background="black";
+          // document.getElementById('grid').style.animation=undefined;
+          document.getElementById('grid').style.background="black";
+      }
+        function upopen(){
+          document.getElementById('head').style.width='100%';
+          document.getElementById('grid').style.marginTop='100px';
+        }
+        
+        function opens(){
+          document.getElementById('bars').style.visibility='hidden';
+        document.getElementById('grid').style.filter="blur(2.5px) brightness(0.1)";
+        var nodes = document.getElementById("grid").getElementsByTagName('*');
+        for(var i = 0; i < nodes.length; i++){
+            nodes[i].disabled = true;
+        }
+        document.getElementById('grid').style.width="82% !important";
+        document.getElementById('grid').style.marginLeft="18% !important";
+        document.getElementById('sidebar').style.width='18%';
+        document.getElementById('sidebar').style.visibility='visible';
+        document.getElementById('navbar').style.filter="blur(2.5px) brightness(0.1)";
+        document.getElementById('nav').style.filter="blur(2.5px) brightness(0.1)";
+        document.getElementById('show-sidebar').style.left='-100px';
+        document.getElementById('show-sidebar').style.height='0px';
+        document.getElementById('show-sidebar').style.visibility='hidden';
+    }
+    function closed(){
+      document.getElementById('navbar').style.filter="blur(0px) brightness(1)";
+        document.getElementById('nav').style.filter="blur(0px) brightness(1)";
+      document.getElementById('bars').style.visibility='visible';
+      var nodes = document.getElementById("grid").getElementsByTagName('*');
+        for(var i = 0; i < nodes.length; i++){
+            nodes[i].disabled = false;
+        }
+      document.getElementById('grid').style.filter="blur(0px) brightness(1)";
+        document.getElementById('grid').style.width="100%";
+        document.getElementById('grid').style.marginLeft="0%";
+        document.getElementById('sidebar').style.width='0px';
+        document.getElementById('sidebar').style.visibility='hidden';
+        document.getElementById('show-sidebar').style.left='-40px';
+        document.getElementById('show-sidebar').style.height='97vh';
+        document.getElementById('show-sidebar').style.visibility='visible';
+    }
+</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <title>Sidebar template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+</head>
+
+<body id="body">
+  <section id="all">
+<div class="page-wrapper chiller-theme toggled">
+                                                                                                                                    
+        <nav id="sidebar" class="sidebar-wrapper">
+          <!-- <a id="show-sidebar" class="btn btn-sm btn-dark" onclick="opens()" href="#">
+            <i class="fas fa-bars" id="bars"></i>
+        </a> -->
+          <div class="sidebar-content">
+            <div class="sidebar-brand">
+              <a href="#" style="position: sticky !important;">WEBSNAPS</a>
+              <div id="close-sidebar">
+                <i onclick="closed()" class="fas fa-times"></i>
+              </div>
+            </div>
+            
+            <!-- sidebar-search  -->
+            <div class="sidebar-menu">
+              <ul>
+                <li class="header-menu">
+                  <span>Account</span>
+                </li>
+                <li class="sidebar-dropdown">
+                  <a href="#">
+                    <i class="fa fa-user"></i>
+                    <span>Sign in</span>
+                    <span class="badge badge-pill badge-warning"></span>
+                  </a>
+                  
+                </li>
+                <li class="sidebar-dropdown">
+                  <a href="#">
+                    <i class="fa fa-id-card"></i>
+                    <span>New User</span>
+                    <span class="badge badge-pill badge-danger"></span>
+                </li>
+                  <li class="header-menu">
+                  <span>Components</span>
+                </li>
+                  <div class="sidebar-submenu">
+                    <ul>
+                      <li>
+                        <a href="#">General</a>
+                      </li>
+                      <li>
+                        <a href="#">Panels</a>
+                      </li>
+                      <li>
+                        <a href="#">Tables</a>
+                      </li>
+                      <li>
+                        <a href="#">Icons</a>
+                      </li>
+                      <li>
+                        <a href="#">Forms</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              
+              <li class="sidebar-dropdown">
+                  <a href="buttons.html">
+                    <i class="fa fa-globe"></i>
+                    <span>Buttons</span>
+                  </a>
+                </li>
+                  <li class="sidebar-dropdown">
+                  <a href="links.html">
+                    <i class="fa fa-globe"></i>
+                    <span>Links</span>
+                  </a>
+                </li>
+                <li class="header-menu">
+                  <span>About Us</span>
+                </li>
+                <li>
+                  <a href="taskmanager.html">
+                    <i class="fa fa-address-card"></i>
+                    <span>Team</span>
+                    <span class="badge badge-pill badge-primary">5</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="taskmanager.html">
+                    <i class="fa fa-bullhorn"></i>
+                    <span>Reach Us</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- sidebar-menu  -->
+          </div>
+          <!-- sidebar-content  -->
+        </nav>
+
+  <!-- sidebar-wrapper  -->
+  <!-- <div id="head"></div> -->
+  <div class="top-nav-bar" id="navbar">
+    <div class="search-box">
+    <a href="taskmanager.html"><img src="websnaps.png" class="logo"></a>
+    <div class="webname">
+      <h1>WEBSNAPS</h1>
+    </div>
+    <!-- <input type="text" class="form-control" placeholder="search here...">
+    <span class="input-group-text"><i class="fa fa-search"></i></span> -->
+    </div>
+    <div class="user" >
+      <div class="as">
+    <img class="usrimg"src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg" width="50px"
+    height="50px"><br>
+
+
+  </div>
+  <p id="uname">User</p>
+  <div class="Logout">
+
+        <button class="Logout1">Logout</button>
+  </div>
+     </div>
+
+    </div>
+  <div id="nav"><i onclick="opens()" class="fas fa-bars nav-fabar" id="bars"></i>
+
+
+
+    <a href="links.html"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="taskmanager.html"><i class="fa fa-users"></i> About Team</a>
+    <a href="signup.html"><i class="	fa fa-id-card"></i> Sign-up</a>
+    <a href="prac3login.html"><i class="	fa fa-user"></i> Login</a>
+
+    </div>
+  
+  <body id="body">
+  
+  
+  
+  
+  
+  <!----------------------------------------navbar------------------------------------>
+
+
+      <div class="grid-container" id="grid">
+      <a href="link1.html"><div class="grid-items itl1"><a id="l1" href="link1.html">hi</a></div></a>
+      <a href="button2.html"><div class="grid-items itl7" ><a id="l7" href="#">hi</a></div></a>
+      <a href="button3.html"><div class="grid-items itl14"><a id="l14" href="#">hi</a></div></a>
+      <a href="button4.html"><div class="grid-items itl5"><a id="l5" href="#">hi</a></div></a>
+      <a href="button5.html"><div class="grid-items itl3"><a id="l3" href="#">hi</a></div></a>
+      <a href="button6.html"><div class="grid-items itl15"><a id="l15" href="#">hi</a></div></a>
+      <a href="button7.html"><div class="grid-items itl6"><a id="l6" href="#">hi</a></div></a>
+      <a href="button8.html"><div class="grid-items itl11"><a id="l11" href="#">hi</a></div></a>
+      <a href="button9.html"><div class="grid-items itl10"><a id="l10" href="#">hi</a></div></a>
+      <a href="button10.html"><div class="grid-items itl2"><a id="l2" href="#">hi</a></div></a>
+      <a href="button11.html"><div class="grid-items itl4"><a id="l4" href="#">hi</a></div></a>
+      <a href="button12.html"><div class="grid-items itl12"><a id="l12" href="#">hi</a></div></a>
+      <a href="button13.html"><div class="grid-items itl13"><a id="l13" href="#">hi</a></div></a>
+      <a href="button14.html"><div class="grid-items itl8"><a id="l8" href="#">hi</a></div></a>
+      <a href="button15.html"><div class="grid-items itl9"><a id="l9" href="#">hi</a></div></a>
+      </div>  
+  </div>
+</div>
+<!-- page-wrapper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</section>
+</body>
+
+</html>

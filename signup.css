@@ -1,0 +1,41 @@
+
+body{
+background-image: linear-gradient(#8bf8e56e, #faaca899);
+}
+
+
+form{
+text-align:center;
+background-image:  linear-gradient(#141e30 , #243b55);
+
+	color:white;
+	margin-left: 200px;
+	margin-right: 200px;
+}
+table{
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	font-family: Courier New;
+}
+
+h1{
+	font-size:70px;
+	background-image: linear-gradient(#ff7e5f , #feb47b);
+	text-align:center;
+	font-family:Blippo, fantasy;
+margin-left:auto;
+	margin-right:auto;
+}
+td{
+	text-align: left;
+}
+
+span{
+	color:white;
+	font-weight:bold;
+}
+.submi
+{
+border:1px solid black;
+}
